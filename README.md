@@ -1,18 +1,16 @@
-# Docker Container for Logitech Media Server
+# Docker Container for Squeezelite
 
-Docker image for Logitech Media Server (SqueezeCenter, SqueezeboxServer, SlimServer)
+Docker image for Squeezelite which is a "Squeezelite is a small headless squeezebox emulator for linux using alsa audio output".
 
 Build
 ```
-docker build -t koert/logitechmediaserver .
+docker build -t map7/squeezelite .
 ```
 
 
 Run Directly:
 
 ```
-docker run -d -p 9000:9000 -p 3483:3483 \
-  -v <local-state-dir>:/mnt/state -v <audio-dir>:/mnt/music \
-  koert/logitechmediaserver
+docker run -d --link logitechmediaserver:logitechmediaserver --privileged map7/squeezelite
 ```
 
