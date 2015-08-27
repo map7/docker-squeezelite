@@ -11,6 +11,6 @@ docker build -t map7/squeezelite .
 Run Directly:
 
 ```
-docker run -d --link logitechmediaserver:logitechmediaserver --privileged map7/squeezelite
+docker run -d --link logitechmediaserver:map7/logitechmediaserver --privileged map7/squeezelite
 ```
 
